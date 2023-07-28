@@ -1,0 +1,31 @@
+﻿@using Corporate_Solutions_test.Models
+
+@model ProductModel
+@{
+    ViewData["Title"] = "Create new record";
+}
+
+<form asp-action="Create">
+    <dt class="col-sm-2">
+        Nosaukums:
+    </dt>
+    <dd class="col-sm-10">
+        <input type="text" asp-for="Name" placeholder="Preces nosaukums...">
+    </dd>
+    <dt class="col-sm-2">
+        Vienību skaits:
+    </dt>
+    <dd class="col-sm-10">
+        <input type="text" asp-for="Count" placeholder="Preces skaits...">
+    </dd>
+    <dt class="col-sm-2">
+        Cena par vienu vienību:
+    </dt>
+    <dd class="col-sm-10">
+        <input type="text" asp-for="Price" placeholder="Preces cena...">
+    </dd>
+    <div class="mb-3">
+        <a href='javascript:history.go(-1)' class="btn btn-warning">Back</a>
+        <input type="submit" class="btn btn-success" value="Create">
+    </div>
+</form>

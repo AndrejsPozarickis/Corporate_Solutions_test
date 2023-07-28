@@ -1,0 +1,38 @@
+﻿@using Corporate_Solutions_test.Models
+
+@model ProductModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<form asp-action="Edit">
+    <dt class="col-sm-2">
+        Id:
+    </dt>
+    <dd class="col-sm-10">
+        <input type="text" asp-for="Id" value="@Model.Id" readonly>
+    </dd>
+    <dt class="col-sm-2">
+        Nosaukums: 
+    </dt>
+    <dd class="col-sm-10">
+        <input type="text" asp-for="Name" value="@Model.Name">
+    </dd>
+    <dt class="col-sm-2">
+        Vienību skaits:
+    </dt>
+    <dd class="col-sm-10">
+        <input type="text" asp-for="Count" value="@Model.Count">
+    </dd>
+    <dt class="col-sm-2">
+        Cena par vienu vienību:
+    </dt>
+    <dd class="col-sm-10">
+        <input type="text" asp-for="Price" value="@Model.Price">
+    </dd>
+    <div class="mb-3">
+        <a href='javascript:history.go(-1)' class="btn btn-warning">Back</a>
+        <a class="btn btn-danger">Delete</a> @*TODO*@
+        <input type="submit" class="btn btn-success" value="Save" />
+    </div>
+</form>
